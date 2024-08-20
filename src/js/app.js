@@ -1,5 +1,4 @@
 import HelpDesk from './HelpDesk';
-import createRequest from './api/createRequest';
 import TicketView from './TicketView'
 import Ticket from './Ticket';
 const root = document.getElementById('root');

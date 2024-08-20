@@ -1,4 +1,4 @@
-const createRequest = async (options = {}) => {
+const createRequest = async () => {
 };
 
 export default createRequest;

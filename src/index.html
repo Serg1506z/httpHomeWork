@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./index.css">
+  <title>HelpDesk</title>
+</head>
+
+<body>
+  <div class="modal addTicketsModal">
+    <p>Добавить тикет</p>
+    <form class="form">
+      <p>Краткое описание </p>
+      <input name="name" class="ticketsInput" type="text">
+      <p>Подробное описание</p>
+      <textarea name="description" class="ticketsTextarea"></textarea>
+      <div class="ticketsBtn">
+        <button type="button" class="btnModal btnModal-no">Отмена</button>
+        <button type="submit" class="btnModal ok">Ок</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal changeTicketsModal">
+    <p>Изменить тикет</p>
+    <form class="form">
+      <p>Краткое описание </p>
+      <input name="name" class="ticketsInput" type="text">
+      <p>Подробное описание</p>
+      <textarea name="description" class="ticketsTextarea"></textarea>
+      <div class="ticketsBtn">
+        <button type="button" class="btnModal btnModal-no">Отмена</button>
+        <button class="btnModal ok">Ок</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal deleteTicketsModal">
+    <p>Удалить тикет</p>
+    <p>Вы уверены что хотите удалить тикет? Это действительно не обходимо.</p>
+    <div class="ticketsBtn">
+      <button class="btnModal btnModal-no">Отмена</button>
+      <button class="btnModal ok">Ок</button>
+    </div>
+  </div>
+
+  <div class="wrapper" id="root">
+    <button class="addTickets">Добавить тикет</button>
+    <div class="tickets__container"></div>
+  </div>
+
+  <template id="taskTemplate">
+    <div class="container">
+      <div class="setting">
+        <div class="checks">
+          <input class="checkbox" type="checkbox">
+        </div>
+        <div class="deskriptions">
+          <p class="tasks"></p>
+          <p class="date"></p>
+        </div>
+        <div class="buttons">
+          <button class="btn changeTickets">&#9998;</button>
+          <button class="btn deleteTickets">&#10006;</button>
+        </div>
+      </div>
+      <div class="view__block">
+        <p class="description"></p>
+      </div>
+    </div>
+  </template>
+
+</body>
+
+</html>
